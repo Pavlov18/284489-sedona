@@ -11,10 +11,10 @@
         <nav class="main-navigation-left">
           <ul>
             <li>
-              <a href="#">Информация</a>
+              <a href="#" title="Информация">Информация</a>
             </li>
             <li>
-              <a href="#">Фото и видео</a>
+              <a href="#" title="Фото и видео">Фото и видео</a>
             </li>
           </ul>
         </nav>
@@ -24,20 +24,21 @@
         <nav class="main-navigation-right">
           <ul>
             <li>
-              <a href="#">Карта штата</a>
+              <a href="#" title="Карта штата">Карта штата</a>
             </li>
             <li>
-              <a href="#">Гостиницы</a>
+              <a href="#" title="Гостиницы">Гостиницы</a>
             </li>
           </ul>
         </nav>
       </div>
-      <div class="intro-background">
-        <img src="img/white-block.png" width="768" height="37" alt="Седона. Причина 1">
-      </div>
     </header>
     <main class="container">
       <div class="index-shell">
+        <div class="intro-header-background">
+          <div class="header-background-text">
+          </div>
+        </div>
         <div class="sedona-description">
           <h3>СЕДОНА — небольшой городок в Аризоне, заслуживающий большего!</h3>
           <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
@@ -48,7 +49,7 @@
             <p>— №1 —</p>
             <p>Седона — не аттракцион для туристов, там где течет своя жизнь</p>
           </div>
-          <img src="img/sedona-privelege-1.jpg" width="512" height="800" alt="Седона. Причина 1">
+          <img src="img/sedona-privelege-1.jpg" width="512" height="256" alt="Седона. Причина 1">
         </section>
         <section class="features">
           <div class="features-item">
@@ -75,7 +76,7 @@
             <p>— №2 —</p>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </div>
-          <img src="img/sedona-privelege-2.jpg" width="1600" height="800" alt="Седона. Причина 2">
+          <img src="img/sedona-privelege-2.jpg" width="512" height="256" alt="Седона. Причина 2">
         </section>
         <section class="sedona-privelege-unother">
           <div class="sedona-privelege-info">
@@ -98,33 +99,46 @@
           <h2>ЗАИНТЕРЕСОВАЛИСЬ?</h2>
           <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
         </div>
-        <div class="sedona-map">
-        </div>
-        <section class="search-hotel">
-          <div class="search-hotel-head">
-            Поиск гостиницы в седоне
-          </div>
-          <form action="#" class="search-hotel-form" method="get" name="sorting">
-            <fieldset title="Поиск гостиницы в седоне">
-              <legend>Производители:</legend>
-                
-                <input type="checkbox" name="product-maker" id="product-maker-1" checked>
 
-                <input type="checkbox" name="product-maker" id="product-maker-2">
-                <label for="product-maker-2">Mr Natty</label>
-                <input type="checkbox" name="product-maker" id="product-maker-3" checked>
-                <label for="product-maker-3">Suavecito</label>
-                <input type="checkbox" name="product-maker" id="product-maker-4">
-                <label for="product-maker-4">Malin+Goetz</label>
-                <input type="checkbox" name="product-maker" id="product-maker-5">
-                <label for="product-maker-5">Murray’s</label>
-                <input type="checkbox" name="product-maker" id="product-maker-6" checked>
-                <label for="product-maker-6">American Crew</label>
+        <section class="search-hotel">
+          <form action="#" class="search-hotel-form" method="get" name="sorting">
+            <fieldset title="Поиск гостиницы в седоне" class="search-hotel-shell">
+              <legend>Поиск гостиницы в седоне</legend>
+                <label for="date-in">Дата заезда</label>
+                <input type="date" name="sedona-date-in" id="date-in">
+                <label for="date-out">Дата выезда</label>
+                <input type="date" name="sedona-date-out" id="date-out">
+                <label for="full-age">Взрослые</label>
+                <input type="number" min="1" max="10" step="1" value="1" name="sedona-full-age" id="full-age">
+                <label for="children">Дети</label>
+                <input type="number" min="0" max="10" step="1" value="0" name="sedona-children" id="children">
             </fieldset>
-            <button class="btn" type="submit">Показать</button>
+            <button class="btn" type="submit">Найти</button>
           </form>
         </section>
+        <div class="sedona-map">
+        </div>
       </div>
     </main>
+    <footer class="main-footer">
+      <div class="container">
+        <section class="footer-sedona-hashtag">
+          <a href="#">&#35;VISITSEDONA</a><br>
+        </section>
+        <section class="footer-social">
+          <a class="social-btn social-btn-twitter" href="#">Twitter</a>
+          <a class="social-btn social-btn-fb" href="#">Facebook</a>
+          <a class="social-btn social-btn-inst" href="#">Youtube</a>
+        </section>
+        <section class="footer-copyright">
+          <div class="footer-copyright-shell">
+            <p>Website by</p>
+            <a class="btn" href="https://htmlacademy.ru">
+              <img src="img/footer-htmlacademy.png" width="113" height="39" alt="Седона">
+            </a>
+          </div>
+        </section>
+      </div>
+    </footer>
   </body>
 </html>
