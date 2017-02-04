@@ -7,7 +7,7 @@
   </head>
   <body>
     <div class="container">
-      <header class="main-header">
+      <header class="main-header clearfix">
         <div class="logo">
           <a href="#" title="Перейти на главную. Седона.">
             <img src="img/logo.png" width="138" height="70" alt="Седона">
@@ -31,7 +31,7 @@
         </nav>
       </header>
       <main>
-          <form action="#" class="search-housing" method="get" name="sorting">
+          <form action="#" class="search-housing clearfix" method="get" name="sorting">
               <fieldset title="Выберите инфраструктуру" class="search-infrastructure">
                 <legend>Инфраструктура</legend>
                   <input type="checkbox" name="sedona-waterpool" id="waterpool" checked>
@@ -50,10 +50,13 @@
                   <input type="checkbox" name="sedona-apartments" id="apartments" checked>
                   <label for="apartments">Аппартаменты</label>
               </fieldset>
-              <fieldset title="Выберите стоимость в сутки" class="search-price">
-                <legend>Стоимость в сутки (Р)</legend>
-              </fieldset>
-              <button class="btn" type="submit">Показать</button>
+              <div class="price-button-shell">
+                <fieldset title="Выберите стоимость в сутки" class="search-price">
+                  <legend>Стоимость в сутки (Р):</legend>
+                </fieldset>
+                <button class="btn" type="submit">Показать</button>                
+              </div>
+
           </form>
           <div class="total-and-sort">
             <div class="total-and-sort-shell">
@@ -81,6 +84,7 @@
               </div>
               <div class="found-item-info">
                 <h2><a href="#" title="Amara resort &amp; SPA">Amara resort &amp; SPA</a></h2>
+                <div class="found-item-info-block">
                 <div class="type-more-vertical">
                   <span class="type-and-price">Гостиница</span>
                   <a href="#" class="more" title="Amara resort &amp; SPA">Подробнее</a>
@@ -89,6 +93,7 @@
                   <span class="type-and-price">от 4000 р.</span>
                   <a href="#" class="book">Забронировать</a>
                 </div>
+                </div>
               </div>
               <div class="stars-rate-vertical">
                 <div class="stars"><span>звезда</span></div>
@@ -96,7 +101,6 @@
               </div>
             </article>
             <article class="found-item">
-              <div class="found-item-shell">
                 <div class="found-item-img">
                   <a href="#" title="Desert Quail Inn">
                     <img src="img/hotels-2.jpg" width="135" height="90" alt="Desert Quail Inn">
@@ -104,6 +108,7 @@
                 </div>
                 <div class="found-item-info">
                   <h2><a href="#" title="Desert Quail Inn">Desert Quail Inn</a></h2>
+                  <div class="found-item-info-block">
                   <div class="type-more-vertical">
                     <span class="type-and-price">Мотель</span>
                     <a href="#" class="more" title="Desert Quail Inn">Подробнее</a>
@@ -112,16 +117,14 @@
                     <span class="type-and-price">от 3000 р.</span>
                     <a href="#" class="book">Забронировать</a>
                   </div>
+                  </div>
                 </div>
                 <div class="stars-rate-vertical">
                   <div class="stars"><span>звезда</span></div>
                   <div class="rate"><span>Рейтинг: 8,9</span></div>
                 </div>
-              </div>
-              <hr>
             </article>
             <article class="found-item">
-              <div class="found-item-shell">
                 <div class="found-item-img">
                   <a href="#" title="Villas at Poco Diablo">
                     <img src="img/hotels-3.jpg" width="135" height="90" alt="Villas at Poco Diablo">
@@ -129,25 +132,25 @@
                 </div>
                 <div class="found-item-info">
                   <h2><a href="#" title="Villas at Poco Diablo">Villas at Poco Diablo</a></h2>
-                  <div class="type-more-vertical">
-                    <span class="type-and-price">Апантаменты</span>
-                    <a href="#" class="more" title="Villas at Poco Diablo">Подробнее</a>
+                  <div class="found-item-info-block">
+                    <div class="type-more-vertical">
+                      <span class="type-and-price">Апатаменты</span>
+                      <a href="#" class="more" title="Villas at Poco Diablo">Подробнее</a>
+                    </div>
+                    <div class="price-book-shell">
+                      <span class="type-and-price">от 2000 р.</span>
+                      <a href="#" class="book">Забронировать</a>
+                    </div>
                   </div>
-                  <div class="price-book-shell">
-                    <span class="type-and-price">от 2000 р.</span>
-                    <a href="#" class="book">Забронировать</a>
                   </div>
-                </div>
                 <div class="stars-rate-vertical">
                   <div class="stars"><span>звезда</span></div>
                   <div class="rate">Рейтинг: <span>9,2</span></div>
                 </div>
-              </div>
-              <hr>
             </article>
           </section>
       </main>
-      <footer class="main-footer">
+      <footer class="main-footer hotel-footer">
         <div class="footer-sedona-hashtag">
           <a href="#">&#35;visitsedona</a><br>
         </div>

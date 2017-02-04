@@ -5,6 +5,12 @@ body {
   text-transform: uppercase;
 }
 
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .text-black {
   color: #000;
 }
@@ -13,23 +19,409 @@ body {
   color: #fff;
 }
 
+.container {
+  width: 768px;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.main-header {
+  background: #999;
+}
+
+.logo {
+  /*
+  position: absolute;
+  margin-left: 314px;
+  */
+}
+
+.main-navigation {
+  background: #888;
+  max-height: 56px;  /*-- временно */
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro-header-background {
+  display:block;
+  height: 513px;
+  margin-top:-14px;
+  margin-bottom:57px;
+  /*
+  background: url(../img/Welcome.png) no-repeat 50% 75px,
+  url(../img/background-index-768.jpg) no-repeat;
+  */
+}
+
+.intro-header-background p { margin: 0; }
+
+.sedona-description {
+  background: #999;
+  margin-bottom: 55px;
+}
+
+.sedona-description h2 {
+  display: inline-block;
+  width: 453px;
+  margin: 0;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.sedona-description .discription-text {
+  background: #777;
+  margin: 0;
+  margin-top: 35px;
+}
+
+.features-item  h2.title {
+  display: inline-block;
+  width: 160px;
+  margin: 0;
+  padding-top: 48px;
+}
+
+.sedona-privelege-block { }
+
+.privelege-left {
+  background: #333;
+  float: left; 
+}
+
+.sedona-privelege-block .sedona-privelege-info {
+  background: #81b3d2;
+  width: 256px;
+  padding-bottom: 15px;
+
+}
+
+.sedona-privelege-info h2 {
+  display: inline-block;
+  width: 151px;
+  margin: 0;
+  margin-top: 48px;
+}
+
+.privelege_number {
+  display: inline-block;
+  width: 100%;
+  margin-top: 24px;
+
+}
+
+.sedona-privelege-info .discription-text {
+  display: inline-block;
+  width: 200px;
+  margin-top: 26px;
+}
+
+.privelege-img {
+  width: 512px;
+  height: 256px;
+}
+
+.privelege-img-1 {
+  background: url(../img/privelege-1-768.jpg) no-repeat;
+  float: right;
+}
+
+.features {
+  background-color: azure;
+  margin-top: 60px;
+  margin-bottom: 64px;
+}
+
 .features h2,
 .sedona-privelege-unother h2 {
   font-size: 21px;
   font-weight: bold;
 }
 
-.sedona-description h2 {
-  font-size: 30px;
-  line-height: 24px;
+.features-item {
+  float: left;
+  width: 246px;
+  margin: 0 5px;
+  height: 256px;
+}
+
+.features .discription-text {
+  display: inline-block;
+  width: 166px;
+  margin: 0;
+  padding-top: 24px;
+
+}
+
+.privelege-right {
+  float: right;
+}
+
+.privelege-img-2 {
+  background: url(../img/privelege-2-768.jpg);
+  float: left;
+}
+
+.sedona-privelege-unother {
+  background-color: #eee;
+  margin-bottom: 54px;
+}
+
+.sedona-privelege-unother .discription-text {
+  width: 155px;
+}
+
+.sedona-interes {
+  padding-bottom: 291px;
+}
+
+.search-hotel {
+  display: block;
+  width: 568px;
+  height: 481px;
+  margin-top: -141px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.search-hotel-title { 
+  background: #766357;
+  height: 22px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .search-hotel h2 {
+  margin: 0;
   font-size: 21px;
   line-height: 26px;
 }
 
+.search-hotel-form {
+  width: 462px;
+  margin: 0 auto;
+  margin-top: 55px;
+}
+
+.search-date-calendar { }
+
+.minus-plus-shell { }
+
+.button-minus { }
+
+.button-plus { }
+
+.sedona-map {
+  background: url(../img/map-768.jpg);
+  width:  766px;
+  height: 593px;
+  margin: 0 auto;
+}
+
+.main-footer {
+  background-color: #fff;
+  margin-top: -120px;
+  opacity: 0.9; 
+  filter: alpha(Opacity=90);
+}
+
+.hotel-footer { margin-top: 0; }
+
+.footer-sedona-hashtag {
+  float: left;
+  margin-left: 60px;
+  padding-top: 49px;
+  padding-bottom: 49px;
+  font-size: 21px;
+  opacity: 1; 
+  filter: alpha(Opacity=100);
+}
+
+.footer-social {
+  float: left;
+  margin-left: 112px;
+  padding-top: 36px;
+  padding-bottom: 49px;
+  opacity: 1; 
+  filter: alpha(Opacity=100);
+}
+
+.footer-copyright {
+  float: right;
+  margin-right: 31px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  opacity: 1; 
+  filter: alpha(opacity=100);
+}
+
+
+.footer-copyright p {
+  float: left;
+  margin: 0;
+  margin-right: 8px; 
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.footer-copyright a {
+ /* position: absolute;
+  background: url(../img/page-icons.png) no-repeat; */
+  display: inline-block;
+  float: right;
+  width: 113px;
+  height: 40px;
+}
+
+/* ------sedona-hotel -----------*/
+
+.search-housing {
+  display: flex;
+  justify-content: center;
+  padding-left: 46px;
+  padding-right: 46px;
+  padding-top: 29px;
+  padding-bottom: 32px;
+  background: url(../img/background-hotels-768.jpg);
+}
+
+.search-housing fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+} 
+
+.search-infrastructure {   
+  flex-shrink: 0;
+  width: 226px;
+}
+
+.search-typehousing {
+  flex-shrink: 0;
+  width: 226px;
+  padding-left: 14px;
+}
+
+.price-button-shell { 
+  flex-shrink: 0;
+  width: 226px;
+}
+
+.search-price {
+  min-height: 99px;
+}
+
+.search-housing .btn {
+  width: 137px;
+  height: 36px;
+  margin-top: 20px;
+}
+
+/* --------------------------------------*/
+.total-and-sort {
+  background: #999;
+  max-height: 86px;
+  padding: 30px 46px;
+}
+
+.total-and-sort-shell {
+  display: flex;
+}
+
+.results-total {
+  width: 154px;
+  flex-shrink: 0;
+  text-align: left;
+}
+
+.results-total-number {
+  background: #888;
+}
+
+.results-sort-by {
+  background: #777;
+  flex-shrink: 0;
+  width: 371px;
+}
+
+.active { }
+
+.results-sort-by-star {
+  flex-shrink: 0;
+  width: 34px;
+  margin-left: 119px;
+  background: #666;
+}
+
+.sort-up { font-size: 0px; }
+.sort-down { font-size: 0px; }
+
+/* ---------- */
+.found-housing-items {
+  display: flex;
+  flex-flow: column;
+  padding: 0 46px;
+  text-align: left;
+}
+.found-item {
+  display: flex;
+  padding-top: 28px;
+  padding-bottom:30px;
+}
+
+.found-item-img {
+  width: 152px;
+  margin-right: 17px;
+
+}
+.found-item-info {
+  padding-left: 15px;
+  width: 373px;
+} 
+
+.found-item-info-block {
+  display: flex;
+  margin-top: 10px;
+  width: 215px;
+}
+
+.type-more-vertical {
+  flex-shrink: 0;
+  width: 110px;
+  margin-right: 6px;
+}
+
+.type-and-price {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+.more { }
+/* ---------- */
+.price-book-vertical {
+  width: 142px;
+}
+
+.book { }
+
+/* ---------- */
+
+.stars-rate-vertical {
+width: 154px;
+  text-align: right
+}
+
+.stars { }
+.rate { }
+/* ---------- */
+.found-item { }
+.found-item-shell { }
+.found-item-img { }
 .found-item-info h2 {
+  margin: 0;
+  background: #666;
   font-size: 21px;
   line-height: 26px;
 }
