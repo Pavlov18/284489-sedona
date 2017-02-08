@@ -26,40 +26,96 @@ body {
   text-align: center;
 }
 
+.container a {
+  text-decoration: none;
+}
+
 .main-header {
-  background: #999;
+  width: 100%;
+  text-align: left;
+  position: relative;
 }
 
 .logo {
-  /*
   position: absolute;
   margin-left: 314px;
-  */
 }
 
 .main-navigation {
-  background: #888;
-  max-height: 56px;  /*-- временно */
   width: 88%;
   margin-left: auto;
   margin-right: auto;
 }
 
-.intro-header-background {
-  display:block;
-  height: 513px;
-  margin-top:-14px;
-  margin-bottom:57px;
-  /*
-  background: url(../img/Welcome.png) no-repeat 50% 75px,
-  url(../img/background-index-768.jpg) no-repeat;
-  */
+
+.main-navigation ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  width: 100%;
+  list-style: none;
+
 }
 
-.intro-header-background p { margin: 0; }
+.main-navigation li {
+  vertical-align: top;
+  width: 20%;
+  margin: 0;
+  padding: 0;
+
+}
+
+.main-navigation li:nth-child(2) {
+  margin-right: auto;
+}
+
+
+.main-navigation li:nth-child(3),
+.main-navigation li:nth-child(4) {
+  text-align: right;
+}
+
+
+.main-navigation a {
+  display: block;
+  padding: 15px 0 ;
+  font-size:14px;
+  font-weight: bold;
+  color: #000;
+}
+
+
+.main-navigation a:hover {
+  color:#81b3d2;
+}
+
+.main-navigation a:active {
+  opacity: 0.3;
+}
+
+.main-navigation li.active a {
+  color:#766357;
+}
+
+.main-navigation li.active:active a {
+  opacity: 1;
+}
+
+.intro-header-background {
+  display: block;
+  height: 513px;
+  margin-bottom: 57px;
+  background: url(../img/welcome.png) no-repeat 50% 75px,
+    url(../img/background-index-768.jpg) no-repeat;
+}
+
+.intro-header-background p {
+  font-size: 0;
+  margin: 0;
+}
 
 .sedona-description {
-  background: #999;
   margin-bottom: 55px;
 }
 
@@ -72,7 +128,6 @@ body {
 }
 
 .sedona-description .discription-text {
-  background: #777;
   margin: 0;
   margin-top: 35px;
 }
@@ -81,20 +136,23 @@ body {
   display: inline-block;
   width: 160px;
   margin: 0;
-  padding-top: 48px;
 }
 
-.sedona-privelege-block { }
+.sedona-privelege-block {
+  display: block;
+  max-height: 256px;
+}
 
 .privelege-left {
   background: #333;
-  float: left;
+  float: left; 
 }
 
 .sedona-privelege-block .sedona-privelege-info {
+  display: inline-block;
   background: #81b3d2;
   width: 256px;
-  padding-bottom: 15px;
+  padding-bottom: 13px;
 
 }
 
@@ -102,20 +160,20 @@ body {
   display: inline-block;
   width: 151px;
   margin: 0;
-  margin-top: 48px;
+  padding-top: 47px;
+  margin-bottom: 24px;
 }
 
 .privelege_number {
   display: inline-block;
   width: 100%;
-  margin-top: 24px;
-
 }
 
 .sedona-privelege-info .discription-text {
   display: inline-block;
   width: 200px;
   margin-top: 26px;
+  margin-bottom: 20px;
 }
 
 .privelege-img {
@@ -129,7 +187,6 @@ body {
 }
 
 .features {
-  background-color: azure;
   margin-top: 60px;
   margin-bottom: 64px;
 }
@@ -141,11 +198,58 @@ body {
 }
 
 .features-item {
+  display: block;
   float: left;
   width: 246px;
   margin: 0 5px;
   height: 256px;
+  text-align: center;
 }
+
+.features-img {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 29px;
+  background: #fff;
+  font-size: 0;
+  width: 76px;
+  height: 76px;
+}
+
+.features-img::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../img/page-icons.png);
+  background-repeat: no-repeat;
+}
+
+.img-house::before  {
+  width: 75px;
+  height: 72px;
+  background-position: -234px -5px;
+}
+
+.img-food::before  {
+  width: 74px;
+  height: 70px;
+  background-position: -128px -86px;
+}
+
+.img-souvenirs::before {
+  width: 64px;
+  height: 76px;
+  background-position: -212px -87px;
+}
+
+.features .features-item h2 {
+  margin:0;
+}
+
 
 .features .discription-text {
   display: inline-block;
@@ -169,10 +273,14 @@ body {
   margin-bottom: 54px;
 }
 
+
+.sedona-privelege-unother .title {
+  padding-top: 47px;
+}
+
 .sedona-privelege-unother .discription-text {
   width: 155px;
 }
-
 
 .search-hotel {
   position: relative;
@@ -180,10 +288,12 @@ body {
   width: 568px;
   margin-left: auto;
   margin-right: auto;
-
+  box-shadow: 0 0 0 ;
 }
 
-.search-hotel-title {
+.search-hotel.off {display:none;}
+
+.search-hotel-title { 
   background: #766357;
   height: 22px;
   padding-top: 32px;
@@ -191,6 +301,7 @@ body {
 }
 
 .search-hotel h2 {
+  display: inline-block;
   margin: 0;
   font-size: 21px;
   line-height: 26px;
@@ -220,61 +331,6 @@ body {
   margin: 0 auto;
 }
 
-.main-footer {
-  background-color: #fff;
-  margin-top: -120px;
-  opacity: 0.9;
-  filter: alpha(Opacity=90);
-}
-
-.hotel-footer { margin-top: 0; }
-
-.footer-sedona-hashtag {
-  float: left;
-  margin-left: 60px;
-  padding-top: 49px;
-  padding-bottom: 49px;
-  font-size: 21px;
-  opacity: 1;
-  filter: alpha(Opacity=100);
-}
-
-.footer-social {
-  float: left;
-  margin-left: 112px;
-  padding-top: 36px;
-  padding-bottom: 49px;
-  opacity: 1;
-  filter: alpha(Opacity=100);
-}
-
-.footer-copyright {
-  float: right;
-  margin-right: 31px;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  opacity: 1;
-  filter: alpha(opacity=100);
-}
-
-
-.footer-copyright p {
-  float: left;
-  margin: 0;
-  margin-right: 8px;
-  padding-top: 7px;
-  padding-bottom: 7px;
-}
-
-.footer-copyright a {
- /* position: absolute;
-  background: url(../img/page-icons.png) no-repeat; */
-  display: inline-block;
-  float: right;
-  width: 113px;
-  height: 40px;
-}
-
 /* ------sedona-hotel -----------*/
 
 .search-housing {
@@ -291,9 +347,9 @@ body {
   margin: 0;
   padding: 0;
   border: 0 none;
-}
+} 
 
-.search-infrastructure {
+.search-infrastructure {   
   flex-shrink: 0;
   width: 226px;
 }
@@ -304,7 +360,7 @@ body {
   padding-left: 14px;
 }
 
-.price-button-shell {
+.price-button-shell { 
   flex-shrink: 0;
   width: 226px;
 }
@@ -321,70 +377,185 @@ body {
 
 /* --------------------------------------*/
 .total-and-sort {
-  background: #999;
+  vertical-align: middle;
+  margin: 0;
   max-height: 86px;
   padding: 30px 46px;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .total-and-sort-shell {
   display: flex;
 }
 
+
 .results-total {
+  display: inline;
+  vertical-align: middle;
   width: 154px;
   flex-shrink: 0;
   text-align: left;
+  line-height: 26px;
+  font-size: 21px;
+  font-weight: bold;
 }
 
 .results-total-number {
-  background: #888;
 }
 
 .results-sort-by {
-  background: #777;
-  flex-shrink: 0;
   width: 371px;
-}
-
-.active { }
-
-.results-sort-by-star {
+  padding-right: 6px;
+  padding-top: 5px;
   flex-shrink: 0;
-  width: 34px;
-  margin-left: 119px;
-  background: #666;
+  text-align: left;
+  font-size: 0;
 }
 
-.sort-up { font-size: 0px; }
-.sort-down { font-size: 0px; }
+.results-sort-by span {
+  margin: 0;
+  padding-left: 12px;
+  padding-right: 38px;
+  line-height: 18px;
+  font-size: 12px;
+}
+
+.results-sort-by a {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 12px;
+  margin-right: 33px;
+  line-height: 18px;
+  border-bottom: #81b3d2 1px dotted;
+}
+
+.results-sort-by a:hover {
+  color: #81b3d2;
+}
+
+.results-sort-by a:active {
+  color: #000;
+  border-bottom: none;
+}
+
+.results-sort-by a.active {
+  color: #81b3d2;
+  border-bottom: none;
+}
+
+.results-sort-by a:last-child {
+  margin: 0;
+}
+
+.results-sort-arrows {
+  display: inline-block;
+  text-align:left;
+  padding-left: px;
+  flex-shrink: 0;
+  margin-left: 119px;
+  width: 34px;
+  height: 15px;
+  font-size: 0;
+}
+
+.results-sort-btn {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  background: #fff;
+  width: 11px;
+  height: 15px;
+}
+
+.results-sort-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../img/page-icons.png);
+  background-repeat: no-repeat;
+}
+
+.sort-up { margin-right: 12px; }
+
+.sort-up::before, .sort-down::before {
+  width: 11px;
+  height: 10px;
+}
+
+.sort-up::before {
+  background-position: -242px -183px; /*-----вверх СЕРАЯ---*/
+}
+
+.sort-down::before {
+  background-position: -221px -183px; /*-----вниз СЕРАЯ---*/
+}
+
+.sort-up:hover::before { 
+  background-position: -158px -183px; /* ---вверх ЧЕРНАЯ --*/
+}
+
+.sort-down:hover::before {
+  background-position: -307px -129px; /* ---вниз ЧЕНАЯ --*/
+}
+
+.sort-up.active::before,
+.sort-up.active:hover::before,
+.sort-up:active::before {
+  background-position: -200px -183px; /*---вверх СИНЯЯ --*/
+}
+
+.sort-down.active::before,
+.sort-down.active:hover::before,
+.sort-down:active::before {
+  background-position: -179px -183px;  /*---вниз СИНЯЯ --*/
+}
 
 /* ---------- */
+
 .found-housing-items {
   display: flex;
   flex-flow: column;
-  padding: 0 46px;
   text-align: left;
 }
+
+.found-housing-items a {
+  color: #000;
+  padding: 0;
+  margin: 0;
+}
+
 .found-item {
   display: flex;
+  padding: 0 46px;
   padding-top: 28px;
-  padding-bottom:30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .found-item-img {
-  width: 152px;
+  width: 135px;
+  height: 90px;
   margin-right: 17px;
-
+  margin-top: 3px;
 }
+
 .found-item-info {
   padding-left: 15px;
   width: 373px;
+} 
+
+.found-item-info h2 {
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 21px;
+  line-height: 26px;
 }
 
 .found-item-info-block {
   display: flex;
-  margin-top: 10px;
-  width: 215px;
+  width: 258px;
 }
 
 .type-more-vertical {
@@ -395,32 +566,112 @@ body {
 
 .type-and-price {
   display: inline-block;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
+  color: #333;
 }
-.more { }
+
+a.more, a.book {
+  color: #fff;
+  font-weight: bold;
+  padding: 3px 0;
+}
+
+.more {
+  display: inline-block;
+  background: #81b3d2;
+  width: 110px;
+  text-align: center;
+}
+
 /* ---------- */
+
 .price-book-vertical {
   width: 142px;
 }
 
-.book { }
+.book {
+  display: inline-block;
+  background: #766357;
+  width: 142px;
+  color: #fff;
+  text-align: center;
+}
 
 /* ---------- */
 
 .stars-rate-vertical {
-width: 154px;
-  text-align: right
+  width: 154px;
+  text-align: right;
 }
 
-.stars { }
+.stars {
+  display: inline-block;
+  width: 114px;
+  height: 17px;
+  font-size: 0;
+}
+
+.stars span {
+  display: inline-block;
+  background-image: url(../img/page-icons.png);
+  background-repeat: no-repeat;
+  background-position: -45px -37px;
+  width: 18px;
+  height: 17px;
+  margin-left: 6px;
+}
+
+.stars span:first-child {margin-left: 0;}
+
 .rate { }
 /* ---------- */
 .found-item { }
 .found-item-shell { }
-.found-item-img { }
-.found-item-info h2 {
-  margin: 0;
-  background: #666;
+
+
+/*-----footer ----*/ 
+
+.main-footer {
+  background: rgba( 255, 255, 255, 0.9);
+  margin-top: -120px;
+  padding: 36px 0;
+  opacity: 0.9;
+}
+
+.hotel-footer { margin-top: 0; }
+
+.footer-sedona-hashtag {
+  display: inline-block;
+  width: 33.333333%;
+  vertical-align: middle;
   font-size: 21px;
-  line-height: 26px;
+  opacity: 1; 
+}
+
+.footer-social {
+  display: inline-block;
+  width: 33.333333%;
+  vertical-align: middle;
+  font-size: 0;
+  opacity: 1; 
+}
+
+.footer-copyright {
+  float: right;
+  margin-right: 31px;
+  opacity: 1;
+}
+
+
+.footer-copyright p {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-copyright a {
+  /* position: absolute;
+  background: url(../img/page-icons.png) no-repeat; */
+  display: inline-block;
+  vertical-align: middle;
 }

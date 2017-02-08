@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Седона - Главная</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -23,7 +24,7 @@
                 <a href="#" title="Карта штата">Карта штата</a>
               </li>
               <li>
-                <a href="#" title="Гостиницы">Гостиницы</a>
+                <a href="sedona-hotel.html" title="Гостиницы">Гостиницы</a>
               </li>
             </ul>
           </nav>
@@ -49,14 +50,17 @@
           </section>
         <section class="features clearfix">
             <div class="features-item">
+              <div class="features-img img-house">Жилье</div>
               <h2 class="title text-black">Жилье</h2>
               <p class="discription-text text-gray">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
             </div>
             <div class="features-item">
+              <div class="features-img img-food">Еда</div>
               <h2 class="title text-black">Еда</h2>
               <p class="discription-text text-gray">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
             </div>
             <div class="features-item">
+              <div class="features-img img-souvenirs">Сувениры</div>
               <h2 class="title text-black">Сувениры</h2>
               <p class="discription-text text-gray">Не только китайского, но и местного производства!</p>
             </div>
@@ -90,42 +94,42 @@
             <h2 class="title text-black">Заинтересовались?</h2>
             <p class="discription-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
           </div>
-          <section class="search-hotel">
-            <div class="search-hotel-title">
-              <h2 class="title text-white">Поиск гостиницы в седоне</h2>
-            </div>
-            <form action="#" class="search-hotel-form" method="get" name="sorting">
+        <section class="search-hotel">
+          <div class="search-hotel-title">
+            <h2 class="title text-white">Поиск гостиницы в седоне</h2>
+          </div>
+          <form action="#" class="search-hotel-form" method="get" name="sorting">
+            <fieldset>
+              <label for="date-in">Дата заезда:</label>
+              <input type="date" name="sedona-date-in" id="date-in">
+              <button class="search-date-calendar" type="submit">Дата заезда</button>
+            </fieldset>
+            <fieldset>
+              <label for="date-out">Дата выезда:</label>
+              <input type="date" name="sedona-date-out" id="date-out">
+              <button class="search-date-calendar" type="submit">Дата выезда</button>
+            </fieldset>
+            <fieldset>
               <fieldset>
-                <label for="date-in">Дата заезда:</label>
-                <input type="date" name="sedona-date-in" id="date-in">
-                <button class="search-date-calendar" type="submit">Дата заезда</button>
+                <label for="full-age">Взрослые</label>
+                <div class="minus-plus-shell">
+                  <button class="button-minus" type="submit">-</button>
+                  <input type="number" min="1" max="10" step="1" value="1" name="sedona-full-age" id="full-age">
+                  <button class="button-plus" type="submit">+</button>
+                </div>
               </fieldset>
               <fieldset>
-                <label for="date-out">Дата выезда:</label>
-                <input type="date" name="sedona-date-out" id="date-out">
-                <button class="search-date-calendar" type="submit">Дата выезда</button>
+                <label for="children">Дети</label>
+                <div class="minus-plus-shell">
+                  <button class="button-minus" type="submit">-</button>
+                  <input type="number" min="0" max="10" step="1" value="0" name="sedona-children" id="children">
+                  <button class="button-plus" type="submit">+</button>
+                </div>
               </fieldset>
-              <fieldset>
-                <fieldset>
-                  <label for="full-age">Взрослые</label>
-                  <div class="minus-plus-shell">
-                    <button class="button-minus" type="submit">-</button>
-                    <input type="number" min="1" max="10" step="1" value="1" name="sedona-full-age" id="full-age">
-                    <button class="button-plus" type="submit">+</button>
-                  </div>
-                </fieldset>
-                <fieldset>
-                  <label for="children">Дети</label>
-                  <div class="minus-plus-shell">
-                    <button class="button-minus" type="submit">-</button>
-                    <input type="number" min="0" max="10" step="1" value="0" name="sedona-children" id="children">
-                    <button class="button-plus" type="submit">+</button>
-                  </div>
-                </fieldset>
-              </fieldset>
-              <button class="btn" type="submit">Найти</button>
-            </form>
-          </section>
+            </fieldset>
+            <button class="btn" type="submit">Найти</button>
+          </form>
+        </section>
       </main>
     </div>
     <div class="sedona-map">

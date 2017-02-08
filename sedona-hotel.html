@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Седона - Главная</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <div class="container">
       <header class="main-header clearfix">
         <div class="logo">
-          <a href="#" title="Перейти на главную. Седона.">
+          <a href="index.html" title="Перейти на главную. Седона.">
             <img src="img/logo.png" width="138" height="70" alt="Седона">
           </a>
         </div>
@@ -24,8 +25,8 @@
             <li>
               <a href="#" title="Карта штата">Карта штата</a>
             </li>
-            <li>
-              <a href="#" title="Гостиницы">Гостиницы</a>
+            <li class="active">
+              <a title="Гостиницы">Гостиницы</a>
             </li>
           </ul>
         </nav>
@@ -65,13 +66,13 @@
               </div>
               <div class="results-sort-by">
                 <span>Сортировка:</span>
-                <a href="#" title="Сортировать по цене" class="active">По цене</a>
+                <a class="active" title="Сортировать по цене">По цене</a>
                 <a href="#" title="Сортировать по типу">По типу</a>
                 <a href="#" title="Сортировать по рейтингу">По рейтингу</a>
               </div>
-              <div class="results-sort-by-star">
-                <a href="#" class="sort-up active">Сортировать убыванию</a>
-                <a href="#" class="sort-down">Сортировать возрастанию</a>
+              <div class="results-sort-arrows">
+                <a href="#" class="results-sort-btn sort-up">Сортировать убыванию</a>
+                <a class="results-sort-btn sort-down active">Сортировать возрастанию</a>
               </div>
             </div>
           </div>
@@ -79,7 +80,7 @@
             <article class="found-item">
               <div class="found-item-img">
                 <a href="#" title="Amara resort &amp; SPA">
-                  <img src="img/hotels-1.jpg" width="135" height="90" alt="Amara resort &amp; SPA">
+                  <img src="img/hotels-11.jpg" width="135" height="90" alt="Amara resort &amp; SPA">
                 </a>
               </div>
               <div class="found-item-info">
@@ -96,7 +97,12 @@
                 </div>
               </div>
               <div class="stars-rate-vertical">
-                <div class="stars"><span>звезда</span></div>
+                <div class="stars">
+                  <span>звезда</span>
+                  <span>звезда</span>
+                  <span>звезда</span>
+                  <span>звезда</span>
+                </div>
                 <div class="rate">Рейтинг: <span>8,5</span></div>
               </div>
             </article>
@@ -120,7 +126,11 @@
                   </div>
                 </div>
                 <div class="stars-rate-vertical">
-                  <div class="stars"><span>звезда</span></div>
+                  <div class="stars">
+                    <span>звезда</span>
+                    <span>звезда</span>
+                    <span>звезда</span>
+                  </div>
                   <div class="rate"><span>Рейтинг: 8,9</span></div>
                 </div>
             </article>
@@ -134,7 +144,7 @@
                   <h2><a href="#" title="Villas at Poco Diablo">Villas at Poco Diablo</a></h2>
                   <div class="found-item-info-block">
                     <div class="type-more-vertical">
-                      <span class="type-and-price">Апатаменты</span>
+                      <span class="type-and-price">Апартаменты</span>
                       <a href="#" class="more" title="Villas at Poco Diablo">Подробнее</a>
                     </div>
                     <div class="price-book-shell">
@@ -144,7 +154,10 @@
                   </div>
                   </div>
                 <div class="stars-rate-vertical">
-                  <div class="stars"><span>звезда</span></div>
+                  <div class="stars">
+                    <span>звезда</span>
+                    <span>звезда</span>
+                  </div>
                   <div class="rate">Рейтинг: <span>9,2</span></div>
                 </div>
             </article>
