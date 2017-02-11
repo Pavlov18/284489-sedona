@@ -98,36 +98,37 @@
           <div class="search-hotel-title">
             <h2 class="title text-white">Поиск гостиницы в седоне</h2>
           </div>
-          <form action="#" class="search-hotel-form" method="get" name="sorting">
-            <fieldset>
-              <label for="date-in">Дата заезда:</label>
+          <form action="#" class="search-hotel-form open" method="get" name="sorting">
+            <fieldset class="date-in">
+              <label for="date-in" class="search-hotel-text">Дата заезда:</label>
               <input type="date" name="sedona-date-in" id="date-in">
               <button class="search-date-calendar" type="submit">Дата заезда</button>
             </fieldset>
-            <fieldset>
-              <label for="date-out">Дата выезда:</label>
+            <fieldset class="date-out">
+              <label for="date-out" class="search-hotel-text">Дата выезда:</label>
               <input type="date" name="sedona-date-out" id="date-out">
               <button class="search-date-calendar" type="submit">Дата выезда</button>
             </fieldset>
-            <fieldset>
+            <fieldset class="two-column">
               <fieldset>
-                <label for="full-age">Взрослые</label>
+                <label for="full-age" class="search-hotel-text">Взрослые:</label>
                 <div class="minus-plus-shell">
                   <button class="button-minus" type="submit">-</button>
-                  <input type="number" min="1" max="10" step="1" value="1" name="sedona-full-age" id="full-age">
+                  <input type="number" min="1" max="10" step="1" value="2" name="sedona-full-age" id="full-age">
                   <button class="button-plus" type="submit">+</button>
                 </div>
               </fieldset>
               <fieldset>
-                <label for="children">Дети</label>
+                <label for="children" class="search-hotel-text">Дети:</label>
                 <div class="minus-plus-shell">
                   <button class="button-minus" type="submit">-</button>
                   <input type="number" min="0" max="10" step="1" value="0" name="sedona-children" id="children">
                   <button class="button-plus" type="submit">+</button>
                 </div>
               </fieldset>
+              
             </fieldset>
-            <button class="btn" type="submit">Найти</button>
+            <button class="btn text-white" type="submit">Найти</button>
           </form>
         </section>
       </main>
@@ -135,14 +136,14 @@
     <div class="sedona-map">
     </div>
     <div class="container">
-      <footer class="main-footer clearfix">
+      <footer class="main-footer">
         <div class="footer-sedona-hashtag">
-          <a href="#">&#35;VISITSEDONA</a><br>
+          <a class="text-black" href="#">&#35;VISITSEDONA</a><br>
         </div>
         <section class="footer-social">
           <a class="social-btn social-btn-twitter" href="#">Twitter</a>
           <a class="social-btn social-btn-fb" href="#">Facebook</a>
-          <a class="social-btn social-btn-inst" href="#">Youtube</a>
+          <a class="social-btn social-btn-youtube" href="#">Youtube</a>
         </section>
         <div class="footer-copyright">
           <p>Website by</p>
