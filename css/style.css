@@ -1,10 +1,6 @@
-@font-face {
-  font-family: PT Sans;
-  src: url(../fonts/pts55f.ttf);
-}
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic');
 
 body {
-  font-family: "PT Sans", "Arial", serif;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
@@ -33,6 +29,9 @@ body {
 
 .container a {
   text-decoration: none;
+}
+.container button {
+  cursor: pointer;
 }
 
 .main-header {
@@ -144,7 +143,6 @@ body {
 
 .sedona-privelege-block {
   display: block;
-  max-height: 256px;
 }
 
 .privelege-left {
@@ -152,32 +150,35 @@ body {
   float: left; 
 }
 
+p.discription-text {
+  margin: 0;
+  padding: 0;
+}
+
 .sedona-privelege-block .sedona-privelege-info {
   display: inline-block;
   background: #81b3d2;
   width: 256px;
-  padding-bottom: 13px;
-
+  min-height: 256px;
 }
 
 .sedona-privelege-info .title {
   display: inline-block;
   width: 151px;
   margin: 0;
-  padding-top: 47px;
+  padding-top: 46px;
   margin-bottom: 24px;
 }
 
 .privelege_number {
   display: inline-block;
   width: 100%;
+  margin-bottom: 26px;
 }
 
 .sedona-privelege-info .discription-text {
   display: inline-block;
   width: 200px;
-  margin-top: 26px;
-  margin-bottom: 20px;
 }
 
 .privelege-img {
@@ -274,6 +275,7 @@ body {
 .sedona-privelege-unother {
   background-color: #eee;
   margin-bottom: 54px;
+  min-height: 256px;
 }
 
 
@@ -516,7 +518,6 @@ body {
 .search-hotel-form .btn {
   display: inline-block;
   background: #81b3d2;
-  cursor: pointer;
   border: none;
   width: 458px;
   height: 58px;
@@ -679,34 +680,38 @@ body {
 
 .price-controls label {
   display: inline-block;
-
+  padding: 0;
+  text-align: center;
   font-size: 14px;
   line-height: 38px;
   vertical-align: top;
-
   cursor: pointer;
 }
 
-.price-controls .min-price,
+.price-controls .min-price {
+  width: 107px;
+}
+
 .price-controls .max-price {
-  width: 68px;
-  padding-left: 40px;
+  width: 103px;
+  margin-left: 4px;
 }
 
 .price-controls input {
-  width: 45px;
+  max-width: 56px;
   margin: 0;
-
   color: inherit;
   font: inherit;
-
   background: none;
   border: none;
 }
 
+.price-controls input:first-child {
+  max-width: 46px;
+}
+
 .range-controls {
   position: relative;
-
   margin-bottom: 32px;
 }
 
@@ -758,7 +763,6 @@ body {
   border-radius: 2px;
   width: 133px;
   height: 36px;
-  cursor: pointer;
   color: #fff;
   outline: none;
 }
@@ -1060,6 +1064,7 @@ a.more, a.book {
   display: flex;
   background: rgba( 255, 255, 255, 0.9);
   margin-top: -120px;
+  align-items: center;
   padding: 36px 0;
   opacity: 0.9;
 }
@@ -1068,7 +1073,7 @@ a.more, a.book {
 
 .footer-sedona-hashtag {
   display: inline-block;
-  padding-top: 12px;
+
   margin: 0;
   width: 33.333333%;
   vertical-align: middle;
