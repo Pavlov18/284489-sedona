@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic');
 
 body {
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
@@ -1073,11 +1074,11 @@ a.more, a.book {
 
 .footer-sedona-hashtag {
   display: inline-block;
-
   margin: 0;
   width: 33.333333%;
   vertical-align: middle;
   font-size: 21px;
+
   font-weight: bold;
   opacity: 1; 
 }
