@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <title>Седона - Поиск гостиницы в Седоне</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-optimize.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic">
   </head>
   <body>
     <div class="container">
@@ -25,8 +26,8 @@
             <li>
               <a href="#" title="Карта штата">Карта штата</a>
             </li>
-            <li class="active">
-              <a title="Гостиницы">Гостиницы</a>
+            <li>
+              <a title="Гостиницы" class="active">Гостиницы</a>
             </li>
           </ul>
         </nav>
@@ -35,7 +36,6 @@
           <form action="#" class="search-housing text-white" method="get" name="sorting">
               <fieldset title="Выберите инфраструктуру" class="search-infrastructure">
                 <legend>Инфраструктура</legend>
-
                 <label for="waterpool" class="search-housing-checkbox">
                   <input type="checkbox" name="sedona-waterpool" id="waterpool" checked>
                   <span class="checkbox-indicator"></span>    
@@ -52,10 +52,8 @@
                   Wi-Fi
                 </label>
               </fieldset>
-            
               <fieldset title="Выберите тип жилья" class="search-typehousing">
                 <legend>Тип жилья</legend>
-                
                 <label for="thehotel" class="search-housing-checkbox">
                   <input type="checkbox" name="sedona-thehotel" id="thehotel" checked>
                   <span class="checkbox-indicator"></span>
@@ -69,13 +67,12 @@
                 <label for="apartments" class="search-housing-checkbox">
                   <input type="checkbox" name="sedona-apartments" id="apartments" checked>
                   <span class="checkbox-indicator"></span>
-                  Аппартаменты
+                  Апартаменты
                 </label>
               </fieldset>
-            
-              <div class="price-button-shell">
-                <fieldset title="Выберите стоимость в сутки" class="search-price">
-                  <legend class="search-price-title">Стоимость в сутки (Р):</legend>
+              <fieldset title="Выберите стоимость в сутки" class="search-price">
+                <legend class="search-price-title">Стоимость в сутки (Р):</legend>
+                <div class="price-button-shell">
                   <div class="price-controls">
                     <label class="min-price">от <input type="text" name="min-price" value="0"></label>
                     <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
@@ -87,13 +84,11 @@
                     <div class="range-toggle range-toggle-min"></div>
                     <div class="range-toggle range-toggle-max"></div>
                   </div>
-                </fieldset>
+                  </div>
                 <button class="btn" type="submit">Показать</button>                
-              </div>
-
+            </fieldset>
           </form>
           <div class="total-and-sort">
-            <div class="total-and-sort-shell">
               <div class="results-total">
                 Найдено: <span class="results-total-number">3</span>
               </div>
@@ -104,20 +99,19 @@
                 <a href="#" title="Сортировать по рейтингу">По рейтингу</a>
               </div>
               <div class="results-sort-arrows">
-                <a href="#" class="results-sort-btn sort-up">Сортировать убыванию</a>
-                <a class="results-sort-btn sort-down active">Сортировать возрастанию</a>
+                <a href="#" class="results-sort-btn sort-up">&uarr;</a>
+                <a class="results-sort-btn sort-down active">&darr;</a>
               </div>
             </div>
-          </div>
           <section class="found-housing-items">
             <article class="found-item">
               <div class="found-item-img">
                 <a href="#" title="Amara resort &amp; SPA">
-                  <img src="img/hotels-11.jpg" width="135" height="90" alt="Amara resort &amp; SPA">
+                  <img src="img/hotels-1.jpg" width="135" height="90" alt="Amara resort &amp; SPA">
                 </a>
               </div>
               <div class="found-item-info">
-                <h2><a href="#" title="Amara resort &amp; SPA">Amara resort &amp; SPA</a></h2>
+                <h2 class="found-item-title"><a href="#" title="Amara resort &amp; SPA">Amara resort &amp; SPA</a></h2>
                 <div class="found-item-info-block">
                 <div class="type-more-vertical">
                   <span class="type-and-price">Гостиница</span>
@@ -131,10 +125,10 @@
               </div>
               <div class="stars-rate-vertical">
                 <div class="stars">
-                  <span>звезда</span>
-                  <span>звезда</span>
-                  <span>звезда</span>
-                  <span>звезда</span>
+                  <span>&#9733;</span>
+                  <span>&#9733;</span>
+                  <span>&#9733;</span>
+                  <span>&#9733;</span>
                 </div>
                 <div class="rate">Рейтинг: <span>8,5</span></div>
               </div>
@@ -146,7 +140,7 @@
                   </a>
                 </div>
                 <div class="found-item-info">
-                  <h2><a href="#" title="Desert Quail Inn">Desert Quail Inn</a></h2>
+                  <h2 class="found-item-title"><a href="#" title="Desert Quail Inn">Desert Quail Inn</a></h2>
                   <div class="found-item-info-block">
                   <div class="type-more-vertical">
                     <span class="type-and-price">Мотель</span>
@@ -160,9 +154,9 @@
                 </div>
                 <div class="stars-rate-vertical">
                   <div class="stars">
-                    <span>звезда</span>
-                    <span>звезда</span>
-                    <span>звезда</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
                   </div>
                   <div class="rate"><span>Рейтинг: 8,9</span></div>
                 </div>
@@ -174,13 +168,13 @@
                   </a>
                 </div>
                 <div class="found-item-info">
-                  <h2><a href="#" title="Villas at Poco Diablo">Villas at Poco Diablo</a></h2>
+                  <h2 class="found-item-title"><a href="#" title="Villas at Poco Diablo">Villas at Poco Diablo</a></h2>
                   <div class="found-item-info-block">
                     <div class="type-more-vertical">
                       <span class="type-and-price">Апартаменты</span>
                       <a href="#" class="more" title="Villas at Poco Diablo">Подробнее</a>
                     </div>
-                    <div class="price-book-shell">
+                    <div class="price-book-vertical">
                       <span class="type-and-price">от 2000 р.</span>
                       <a href="#" class="book">Забронировать</a>
                     </div>
@@ -188,8 +182,8 @@
                   </div>
                 <div class="stars-rate-vertical">
                   <div class="stars">
-                    <span>звезда</span>
-                    <span>звезда</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
                   </div>
                   <div class="rate">Рейтинг: <span>9,2</span></div>
                 </div>
