@@ -295,6 +295,15 @@ body {
   color: #fff;
 }
 
+.index-search-title:hover {
+  background: #604e43;
+}
+
+.index-search-title:active {
+  background: #503e33;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .index-search-form {
   position: absolute;
   text-align: left;
@@ -367,7 +376,6 @@ body {
   color: #000;
   padding-left: 13px;
   border: none;
-  outline: none;
   font-weight: bold;
   font-size: 14px;
   line-height: 26px;
@@ -398,11 +406,11 @@ body {
 .index-search-form input[type="date"]:focus {
   background: #fff;
   box-shadow: inset 0 0 0 2px #e5e5e5;
+  outline: 2px solid #e5e5e5;
 }
 
 .index-search-form button {
   background: none;
-  outline: none;
 }
 
 .index-search-form button::before {
@@ -536,7 +544,6 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   border: none;
-  outline: none;
 }
 
 .index-search-form .btn:hover {
@@ -769,7 +776,6 @@ input[type="checkbox"]:disabled:checked + .search-housing-checkbox::before {
   border-radius: 2px;
   width: 137px;
   color: #fff;
-  outline: none;
 }
 
 .search-housing .btn:hover {
