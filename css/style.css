@@ -118,6 +118,7 @@ body {
 
 .intro-header-background {
   display: block;
+  width: 100%;
   height: 513px;
   margin-bottom: 57px;
   background: url(../img/welcome.png) no-repeat 50% 77px,
@@ -416,11 +417,6 @@ body {
   -moz-appearance: textfield;
 }
 
-.index-search-form input[type="text"]::-webkit-calendar-picker-indicator {
-  background: transparent;
-  opacity: 0;
-}
-
 .index-search-form input[type="text"] {
   position: absolute;
   top: 0;
@@ -436,7 +432,18 @@ body {
 .index-search-form input[type="text"]:focus {
   background: #fff;
   box-shadow: inset 0 0 0 2px #e5e5e5;
-  outline: 2px solid #e5e5e5;
+  outline-color: rgba(229, 229, 229, 0);
+}
+
+.index-search-form input[type="text"]::-ms-clear {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
 
 .index-search-form button {
