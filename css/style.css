@@ -136,6 +136,10 @@ body {
   margin: 0 auto;
 }
 
+.title {
+  margin-bottom: 24px;
+}
+
 .sedona-description {
   margin-bottom: 52px;
 }
@@ -143,6 +147,7 @@ body {
 .sedona-description .title {
   font-size: 21px;
   line-height: 26px;
+  width: 454px;
 }
 
 .sedona-description .discription-text {
@@ -184,10 +189,14 @@ body {
   background: #81b3d2;
 }
 
+.sedona-privelege-block .discription-text {
+  width: 180px;
+}
+
 .sedona-privelege-info .title {
-  margin: 0;
+  display: inline-block;
+  width: 151px;
   padding-top: 47px;
-  margin-bottom: 24px;
 }
 
 .privelege_number {
@@ -200,8 +209,7 @@ body {
   margin-bottom: 61px;
 }
 
-.features h2,
-.sedona-privelege-unother h2 {
+.features .title {
   font-size: 21px;
   font-weight: bold;
 }
@@ -252,8 +260,12 @@ body {
   background-position: -212px -87px;
 }
 
-.features .discription-text {
-  padding-top: 24px;
+.features-item .discription-text {
+  width: 158px;
+}
+
+.features-item:last-child .discription-text {
+  width: 166px;
 }
 
 .sedona-privelege-unother {
@@ -262,8 +274,21 @@ body {
   min-height: 256px;
 }
 
-.sedona-privelege-unother .title {
+.privelege-unother-item {
+  float: left;
+  width: 256px;
+}
+
+.privelege-unother-item .title {
   padding-top: 47px;
+}
+
+.privelege-unother-item .discription-text {
+  width: 158px;
+}
+
+.privelege-unother-item:nth-child(2) .discription-text {
+  width: 148px;
 }
 
 .sedona-interested h2 {
@@ -272,9 +297,14 @@ body {
   font-size: 30px;
 }
 
+.sedona-interested span {
+  display: block;
+}
+
 .sedona-interested .discription-text {
   line-height: 24px;
   margin-bottom: 47px;
+  width: 440px;
 }
 
 .index-search-hotel {
@@ -386,12 +416,12 @@ body {
   -moz-appearance: textfield;
 }
 
-.index-search-form input[type="date"]::-webkit-calendar-picker-indicator {
+.index-search-form input[type="text"]::-webkit-calendar-picker-indicator {
   background: transparent;
   opacity: 0;
 }
 
-.index-search-form input[type="date"] {
+.index-search-form input[type="text"] {
   position: absolute;
   top: 0;
   right: 0;
@@ -399,11 +429,11 @@ body {
   height: 32px;
 }
 
-.index-search-form input[type="date"]:hover {
+.index-search-form input[type="text"]:hover {
   background: #ebebeb;
 }
 
-.index-search-form input[type="date"]:focus {
+.index-search-form input[type="text"]:focus {
   background: #fff;
   box-shadow: inset 0 0 0 2px #e5e5e5;
   outline: 2px solid #e5e5e5;
@@ -413,7 +443,8 @@ body {
   background: none;
 }
 
-.index-search-form button::before {
+.index-search-calendar::before,
+.minus-plus-shell button::before {
   content: "";
   position: absolute;
   top: 50%;
