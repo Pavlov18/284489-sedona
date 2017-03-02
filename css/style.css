@@ -121,7 +121,7 @@ body {
   width: 100%;
   height: 513px;
   margin-bottom: 57px;
-  background: url(../img/welcome.png) no-repeat 50% 77px,
+  background: url(../img/welcome-sedona.png) no-repeat 50% 77px,
     url(../img/background-index-768.jpg) no-repeat;
   background-color: #ddebf4;
   color: #000;
@@ -157,6 +157,7 @@ body {
 
 .sedona-privelege-block {
   display: block;
+  background: #81b3d2;
 }
 
 .privelege-img {
@@ -187,7 +188,6 @@ body {
 .sedona-privelege-block .sedona-privelege-info {
   width: 256px;
   min-height: 256px;
-  background: #81b3d2;
 }
 
 .sedona-privelege-block .discription-text {
